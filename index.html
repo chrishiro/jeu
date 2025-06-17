@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Hub - Sélectionnez votre jeu</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-gaming">Gaming</span>
+                <span class="title-hub">Hub</span>
+            </h1>
+            <p class="subtitle">Choisissez votre aventure</p>
+        </header>
+
+        <main class="main">
+            <div class="games-grid">
+                <div class="game-card" data-game="snake">
+                    <div class="game-icon">🐍</div>
+                    <h3 class="game-title">Snake</h3>
+                    <p class="game-description">Le classique jeu du serpent. Mangez les pommes et grandissez sans vous mordre la queue!</p>
+                    <div class="game-stats">
+                        <span class="difficulty easy">Facile</span>
+                        <span class="players">1 joueur</span>
+                    </div>
+                    <button class="play-btn" onclick="navigateToGame('snake')">Jouer</button>
+                </div>
+
+                <div class="game-card" data-game="tictactoe">
+                    <div class="game-icon">⭕</div>
+                    <h3 class="game-title">Tic-Tac-Toe</h3>
+                    <p class="game-description">Le jeu de morpion classique. Alignez trois symboles pour gagner!</p>
+                    <div class="game-stats">
+                        <span class="difficulty easy">Facile</span>
+                        <span class="players">1-2 joueurs</span>
+                    </div>
+                    <button class="play-btn" onclick="navigateToGame('tictactoe')">Jouer</button>
+                </div>
+
+                <div class="game-card" data-game="memory">
+                    <div class="game-icon">🧠</div>
+                    <h3 class="game-title">Memory</h3>
+                    <p class="game-description">Testez votre mémoire en retrouvant les paires de cartes identiques!</p>
+                    <div class="game-stats">
+                        <span class="difficulty medium">Moyen</span>
+                        <span class="players">1 joueur</span>
+                    </div>
+                    <button class="play-btn" onclick="navigateToGame('memory')">Jouer</button>
+                </div>
+
+                <div class="game-card" data-game="tetris">
+                    <div class="game-icon">🧩</div>
+                    <h3 class="game-title">Tetris</h3>
+                    <p class="game-description">Empilez les blocs et complétez des lignes dans ce puzzle addictif!</p>
+                    <div class="game-stats">
+                        <span class="difficulty hard">Difficile</span>
+                        <span class="players">1 joueur</span>
+                    </div>
+                    <button class="play-btn" onclick="navigateToGame('tetris')">Jouer</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Gaming Hub. Créé avec ❤️ pour les passionnés de jeux.</p>
+        </footer>
+    </div>
+
+    <script src="js/navigation.js"></script>
+</body>
+</html>
