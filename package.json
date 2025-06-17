@@ -1,0 +1,32 @@
+{
+  "name": "gaming-hub",
+  "version": "1.0.0",
+  "description": "Collection de jeux classiques en ligne : Snake, Tic-Tac-Toe, Memory et Tetris",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'",
+    "dev": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "games",
+    "javascript",
+    "html5",
+    "css3",
+    "snake",
+    "tetris",
+    "memory",
+    "tic-tac-toe"
+  ],
+  "author": "Gaming Hub",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votre-username/gaming-hub.git"
+  },
+  "homepage": "https://votre-site.netlify.app",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

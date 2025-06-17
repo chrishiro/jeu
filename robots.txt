@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap (vous pouvez l'ajouter plus tard)
+# Sitemap: https://votre-site.netlify.app/sitemap.xml

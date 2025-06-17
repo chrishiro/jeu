@@ -7,7 +7,15 @@ function navigateToGame(gameName) {
     button.textContent = 'Chargement...';
     button.disabled = true;
     
-    // Simulate loading delay for better UX
+    // Handle special case for calendar
+    if (gameName === 'calendar') {
+        setTimeout(() => {
+            window.location.href = 'calendrier/calendirer.php';
+        }, 500);
+        return;
+    }
+    
+    // Simulate loading delay for regular games
     setTimeout(() => {
         window.location.href = `games/${gameName}/index.html`;
     }, 500);
@@ -15,6 +23,29 @@ function navigateToGame(gameName) {
 
 function goHome() {
     window.location.href = '../../index.html';
+}
+
+function showSection(sectionName) {
+    // Si c'est la section calendrier, rediriger vers calendrier.php
+    if (sectionName === 'calendrier') {
+        window.location.href = 'calendrier/calendirer.php';
+        return;
+    }
+    
+    // Pour les autres sections, afficher/masquer comme d'habitude
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    document.getElementById(`section-${sectionName}`).classList.add('active');
+    
+    // Mettre à jour la navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    event.target.classList.add('active');
 }
 
 // Add smooth scroll behavior for better UX

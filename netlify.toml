@@ -7,6 +7,12 @@
   to = "/games/:splat"
   status = 200
 
+# Redirect pour les jeux
+[[redirects]]
+  from = "/games/tetris/*"
+  to = "/games/tetris/:splat"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -1,0 +1,8 @@
+# Redirections pour les jeux
+/games/snake    /games/snake/index.html    200
+/games/memory   /games/memory/index.html   200
+/games/tictactoe /games/tictactoe/index.html 200
+/games/tetris   /games/tetris/index.html   200
+
+# Fallback pour toutes les autres routes
+/*              /index.html                404

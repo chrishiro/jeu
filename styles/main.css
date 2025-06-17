@@ -176,6 +176,28 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Style spécial pour la carte du calendrier */
+.game-card.special-card {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.game-card.special-card .game-icon {
+    font-size: 5rem;
+    background: -webkit-linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.game-card.special-card .play-btn {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+.game-card.special-card .play-btn:hover {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
 /* Footer */
 .footer {
     text-align: center;
