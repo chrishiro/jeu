@@ -4,111 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Hub - Sélectionnez votre jeu</title>
+    
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Calendrier partagé pour Chris et Morgane">
+    <meta name="author" content="Chris et Morgane">
 
-    <!-- PWA Meta Tags -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#00d4ff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Gaming Hub">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Gaming Hub - Collection de jeux classiques en ligne : Snake, Tic-Tac-Toe, Memory et Tetris">
-    <meta name="keywords" content="jeux, games, snake, tetris, memory, tic-tac-toe, morpion, jeux en ligne">
-    <meta name="author" content="Gaming Hub">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Gaming Hub - Sélectionnez votre jeu">
-    <meta property="og:description" content="Collection de jeux classiques en ligne : Snake, Tic-Tac-Toe, Memory et Tetris">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://votre-site.netlify.app">
-    <meta property="og:image" content="https://votre-site.netlify.app/og-image.png">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gaming Hub - Sélectionnez votre jeu">
-    <meta name="twitter:description" content="Collection de jeux classiques en ligne">
-    <meta name="twitter:image" content="https://votre-site.netlify.app/og-image.png">
 </head>
 <body>
     <div class="container">
-        <nav class="navigation">
-            <div class="nav-brand">
-                <span class="nav-gaming">Gaming</span>
-                <span class="nav-hub">Hub</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#" class="nav-link active" onclick="showSection('accueil')">🎮 Jeux</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('calendrier')">📅 Calendrier</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('ongles')">💅 Inspiration Ongles</a></li>
-            </ul>
-            <div class="nav-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+        </div>
 
         <header class="header">
             <h1 class="title">
-                <span class="title-gaming">Gaming</span>
-                <span class="title-hub">Hub</span>
+                <span class="title-gaming">Chris et Morgane</span>
             </h1>
-            <p class="subtitle">Choisissez votre aventure</p>
         </header>
 
         <main class="main">
-            <!-- Section Jeux (par défaut) -->
-            <div id="section-accueil" class="content-section active">
-                <div class="games-grid">
-                <div class="game-card" data-game="snake">
-                    <div class="game-icon">🐍</div>
-                    <h3 class="game-title">Snake</h3>
-                    <p class="game-description">Le classique jeu du serpent. Mangez les pommes et grandissez sans vous mordre la queue!</p>
-                    <div class="game-stats">
-                        <span class="difficulty easy">Facile</span>
-                        <span class="players">1 joueur</span>
-                    </div>
-                    <button class="play-btn" onclick="navigateToGame('snake')">Jouer</button>
-                </div>
-
-                <div class="game-card" data-game="tictactoe">
-                    <div class="game-icon">⭕</div>
-                    <h3 class="game-title">Tic-Tac-Toe</h3>
-                    <p class="game-description">Le jeu de morpion classique. Alignez trois symboles pour gagner!</p>
-                    <div class="game-stats">
-                        <span class="difficulty easy">Facile</span>
-                        <span class="players">1-2 joueurs</span>
-                    </div>
-                    <button class="play-btn" onclick="navigateToGame('tictactoe')">Jouer</button>
-                </div>
-
-                <div class="game-card" data-game="memory">
-                    <div class="game-icon">🧠</div>
-                    <h3 class="game-title">Memory</h3>
-                    <p class="game-description">Testez votre mémoire en retrouvant les paires de cartes identiques!</p>
-                    <div class="game-stats">
-                        <span class="difficulty medium">Moyen</span>
-                        <span class="players">1 joueur</span>
-                    </div>
-                    <button class="play-btn" onclick="navigateToGame('memory')">Jouer</button>
-                </div>
-
-                <div class="game-card" data-game="tetris">
-                    <div class="game-icon">🎮</div>
-                    <h3 class="game-title">Tetris</h3>
-                    <p class="game-description">Le célèbre jeu de puzzle. Empilez les blocs et complétez des lignes pour marquer des points!</p>
-                    <div class="game-stats">
-                        <span class="difficulty medium">Moyen</span>
-                        <span class="players">1 joueur</span>
-                    </div>
-                    <button class="play-btn" onclick="navigateToGame('tetris')">Jouer</button>
-                </div>
-
                 <div class="game-card special-card" data-game="calendar">
                     <div class="game-icon">📅</div>
                     <h3 class="game-title">Calendrier Partagé</h3>
@@ -117,80 +32,13 @@
                         <span class="difficulty easy">Simple</span>
                         <span class="players">2 utilisateurs</span>
                     </div>
-                    <button class="play-btn" onclick="navigateToGame('calendar')">Accéder</button>
+                    <a href="/jeu/calendrier/index.html" class="play-btn">Accéder</a>
                 </div>
-            </div>
-            </div>
-
-            <!-- Section Calendrier -->
-            <div id="section-calendrier" class="content-section">
-                <div class="page-header">
-                    <h2 class="page-title">📅 Calendrier Partagé</h2>
-                    <p class="page-subtitle">Organisez vos événements ensemble</p>
-                </div>
-                <div class="calendar-container">
-                    <div class="calendar-controls">
-                        <button class="calendar-btn" onclick="previousMonth()">‹</button>
-                        <h3 id="calendar-month-year" class="calendar-title"></h3>
-                        <button class="calendar-btn" onclick="nextMonth()">›</button>
-                    </div>
-                    <div class="calendar-users">
-                        <div class="user-selector">
-                            <label class="user-label">
-                                <input type="radio" name="user" value="vous" checked>
-                                <span class="user-color user-vous"></span>
-                                Vous
-                            </label>
-                            <label class="user-label">
-                                <input type="radio" name="user" value="morgane">
-                                <span class="user-color user-morgane"></span>
-                                Morgane
-                            </label>
-                        </div>
-                    </div>
-                    <div id="calendar-grid" class="calendar-grid"></div>
-                    <div class="event-form-container">
-                        <form id="event-form" class="event-form">
-                            <h4>Ajouter un événement</h4>
-                            <input type="hidden" id="event-date">
-                            <input type="text" id="event-title" placeholder="Titre de l'événement" required>
-                            <textarea id="event-description" placeholder="Description (optionnel)"></textarea>
-                            <div class="form-buttons">
-                                <button type="submit">Ajouter</button>
-                                <button type="button" onclick="closeEventForm()">Annuler</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section Inspiration Ongles -->
-            <div id="section-ongles" class="content-section">
-                <div class="page-header">
-                    <h2 class="page-title">💅 Inspiration Ongles</h2>
-                    <p class="page-subtitle">Découvrez les dernières tendances nail art</p>
-                </div>
-                <div class="nail-gallery">
-                    <div class="gallery-filters">
-                        <button class="filter-btn active" data-filter="all">Tout</button>
-                        <button class="filter-btn" data-filter="motifs">Motifs</button>
-                        <button class="filter-btn" data-filter="couleurs">Couleurs</button>
-                        <button class="filter-btn" data-filter="occasions">Occasions</button>
-                        <button class="filter-btn" data-filter="saisons">Saisons</button>
-                    </div>
-                    <div class="search-container">
-                        <input type="text" id="nail-search" placeholder="Rechercher par style ou couleur...">
-                    </div>
-                    <div id="nail-grid" class="nail-grid"></div>
-                </div>
-            </div>
         </main>
-
-        <footer class="footer">
-            <p>&copy; 2024 Gaming Hub. Créé avec ❤️ pour les passionnés de jeux.</p>
-        </footer>
     </div>
 
-    <script src="js/navigation.js"></script>
+    <!-- Scripts -->
+    <script src="js/navigation.js" defer></script>
+    <script src="js/theme.js" defer></script>
 </body>
 </html>
